@@ -1,5 +1,6 @@
 import torch.nn as nn
 import torch 
+import torchvision.models as models
 from typing import List, Dict, Tuple
 
 class TableFormerModel(nn.Module):
@@ -9,6 +10,15 @@ class TableFormerModel(nn.Module):
     def forward(self):
         pass
 
-    class ResNetModel():
+    class CNNBackboneNetwork():
         def __init__(self) -> None:
+            resnet = models.resnet18()
             
+
+    class StructureDecoder():
+        def __init__(self) -> None:
+            pass
+            
+    class CellBBoxDecode():
+        def __init__(self) -> None:
+            pass
