@@ -1,3 +1,4 @@
+from turtle import forward
 import torch.nn as nn
 import torch 
 import torchvision.models as models
@@ -9,11 +10,19 @@ class TableFormerModel(nn.Module):
 
     def forward(self):
         pass
+    
 
     class CNNBackboneNetwork():
         def __init__(self) -> None:
-            self.resnet = models.resnet18()
-            
+            resnet_modules = list(models.resnet18().modules())[:-2]
+            self.resnet = nn.Sequential(
+                        *resnet_modules,
+                        nn.AdaptiveAvgPool2d((28,28))
+                    )
+
+        def forward(self):
+            pass
+
 
     class StructureDecoder():
         def __init__(self) -> None:
