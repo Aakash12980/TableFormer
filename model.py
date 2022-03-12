@@ -10,11 +10,11 @@ class TableFormerModel(nn.Module):
 
     def forward(self):
         pass
-    
+
 
     class CNNBackboneNetwork():
         def __init__(self) -> None:
-            resnet_modules = list(models.resnet18().modules())[:-2]
+            resnet_modules = list(models.resnet18().children())[:-2]
             self.resnet = nn.Sequential(
                         *resnet_modules,
                         nn.AdaptiveAvgPool2d((28,28))
