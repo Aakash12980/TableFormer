@@ -12,7 +12,7 @@ class TableFormerModel(nn.Module):
 
     class CNNBackboneNetwork():
         def __init__(self) -> None:
-            resnet = models.resnet18()
+            self.resnet = models.resnet18()
             
 
     class StructureDecoder():
