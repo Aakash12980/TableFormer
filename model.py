@@ -11,7 +11,6 @@ class TableFormerModel(nn.Module):
     def forward(self):
         pass
 
-
     class CNNBackboneNetwork():
         def __init__(self) -> None:
             resnet_modules = list(models.resnet18().children())[:-2]
